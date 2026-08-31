@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Velora Cart</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link href="../src/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-[#FFF7F7]">
+    <!-- NAVBAR -->
+    <nav
+      class="bg-[#FAE8E8] fixed w-full top-0 z-50 border-b border-pink-100 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- LOGO -->
+        <a href="#" class="flex items-center gap-3">
+          <img
+            src="/aset/photo_6062000353378504431_y.jpg"
+            class="w-10 h-10 rounded-full object-cover"
+            alt=""
+          />
+
+          <span class="text-2xl font-bold text-pink-900"> Velora </span>
+        </a>
+
+        <!-- MENU -->
+        <div
+          class="hidden md:flex items-center gap-10 font-medium text-pink-900"
+        >
+          <a href="/view/coba.html" class="hover:text-pink-500 transition">
+            Home
+          </a>
+          <a href="#" class="hover:text-pink-500 transition"> Contact </a>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div class="flex items-center gap-5">
+          <!-- SEARCH -->
+          <form class="hidden md:block">
+            <div class="relative">
+              <input
+                type="search"
+                placeholder="Search..."
+                class="w-64 rounded-full border border-pink-200 bg-white px-4 py-2 pl-10 text-sm outline-none focus:border-pink-400"
+              />
+
+              <!-- SEARCH ICON -->
+              <i
+                data-feather="search"
+                class="absolute left-3 top-2.5 w-4 h-4 text-pink-400"
+              ></i>
+            </div>
+          </form>
+
+          <!-- CART -->
+          <a href="/view/cart.html">
+            <button class="hover:scale-110 transition">
+              <i data-feather="shopping-cart" class="w-7 h-7 text-pink-900"></i>
+            </button>
+          </a>
+
+          <!-- PROFILE -->
+          <a href="/view/profile.html">
+            <button class="hover:scale-110 transition">
+              <i data-feather="user" class="w-7 h-7 text-pink-900"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PRODUCT -->
+    <section class="pt-32 px-5">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-pink-700">Cart</h2>
+
+        <!-- GRID -->
+        <div
+          id="productContainer"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7"
+        ></div>
+      </div>
+    </section>
+
+    <section class="pt-15 pb-20 px-5">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-10">
+        <!-- CART ITEM -->
+        <div id="cartContainer" class="lg:col-span-2 space-y-5"></div>
+
+        <!-- shoppinh -->
+        <div class="bg-white rounded-2xl shadow p-6 h-fit">
+          <h2 class="text-2xl font-bold text-pink-700 mb-5">Shopping</h2>
+
+          <div class="flex justify-between text-lg">
+            <span>Subtotal</span>
+
+            <span id="subtotal">Rp0 </span>
+          </div>
+
+          <button
+            onclick="deleteSelected()"
+            class="w-full border border-pink-400 text-pink-600 py-3 rounded-xl mt-4"
+          >
+            Delete Selected
+          </button>
+
+          <button
+            onclick="checkoutSelected()"
+            class="bg-pink-400 text-white w-full py-3 rounded-xl mt-6"
+          >
+            Checkout
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="/script/cart.js"></script>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

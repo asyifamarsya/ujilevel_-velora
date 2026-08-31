@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Velora</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Feather -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-pink-50 font-[Nunito]">
+    <!-- NAVBAR -->
+    <nav
+      class="bg-[#FAE8E8] fixed w-full top-0 z-50 border-b border-pink-100 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- LOGO -->
+        <a href="#" class="flex items-center gap-3">
+          <img
+            src="/aset/photo_6062000353378504431_y.jpg"
+            class="w-10 h-10 rounded-full object-cover"
+            alt=""
+          />
+
+          <span class="text-2xl font-bold text-pink-900"> Velora </span>
+        </a>
+
+        <!-- MENU -->
+        <div
+          class="hidden md:flex items-center gap-10 font-medium text-pink-900"
+        >
+          <a href="/view/coba.html" class="hover:text-pink-500 transition">
+            Home
+          </a>
+
+          <a href="#" class="hover:text-pink-500 transition"> Contact </a>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div class="flex items-center gap-5">
+          <!-- SEARCH -->
+          <form class="hidden md:block">
+            <div class="relative">
+              <input
+                type="search"
+                placeholder="Search..."
+                class="w-64 rounded-full border border-pink-200 bg-white px-4 py-2 pl-10 text-sm outline-none focus:border-pink-400"
+              />
+
+              <!-- SEARCH ICON -->
+              <i
+                data-feather="search"
+                class="absolute left-3 top-2.5 w-4 h-4 text-pink-400"
+              ></i>
+            </div>
+          </form>
+
+          <!-- CART -->
+          <a href="/view/cart.html">
+            <button class="hover:scale-110 transition">
+              <i data-feather="shopping-cart" class="w-7 h-7 text-pink-900"></i>
+            </button>
+          </a>
+
+          <!-- PROFILE -->
+          <a href="/view/profile.html">
+            <button class="hover:scale-110 transition">
+              <i data-feather="user" class="w-7 h-7 text-pink-900"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PROFILE -->
+    <section class="max-w-4xl mx-auto px-6 py-16">
+      <div class="bg-white rounded-[35px] shadow-xl p-10">
+        <!-- TOP -->
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <!-- PHOTO -->
+          <div class="relative flex flex-col items-center gap-4">
+            <div class="relative">
+              <!-- Upload -->
+              <label
+                for="uploadPhoto"
+                class="absolute bottom-0 right-0 bg-pink-500 p-2 rounded-full text-white hover:bg-pink-600 transition cursor-pointer"
+              >
+                <i data-feather="camera" class="w-4 h-4"></i>
+              </label>
+
+              <input
+                type="file"
+                id="uploadPhoto"
+                accept="image/*"
+                class="hidden"
+              />
+              <!-- photo -->
+              <img
+              id="profileImage"
+              src="/aset/cip.jpg"
+              class="w-32 h-32 rounded-full object-cover"
+              />
+            </div>
+
+            <!-- BUTTON PHOTO -->
+            <div class="flex gap-3">
+              <button
+                id="savePhotoBtn"
+                class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-xl font-semibold hidden"
+              >
+                Save Photo
+              </button>
+
+              <button
+                id="cancelPhotoBtn"
+                class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-xl font-semibold hidden"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+
+          <!-- INFO -->
+          <div class="text-center md:text-left">
+            <h1 class="text-4xl font-bold text-slate-800 mb-2">
+              Asyifa Marsya Nirmala
+            </h1>
+
+            <p class="text-gray-500 mb-4">asyifamarsya@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+          <!-- Username -->
+          <div>
+            <label class="text-gray-600 font-semibold mb-2 block">
+              Username
+            </label>
+
+            <input
+              type="text"
+              value="asyifamarsya"
+              class="w-full border-2 border-pink-200 rounded-2xl px-5 py-4 outline-none focus:border-pink-400"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label class="text-gray-600 font-semibold mb-2 block">
+              Email
+            </label>
+
+            <input
+              type="email"
+              value="asyifa@gmail.com"
+              class="w-full border-2 border-pink-200 rounded-2xl px-5 py-4 outline-none focus:border-pink-400"
+            />
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <label class="text-gray-600 font-semibold mb-2 block">
+              Phone
+            </label>
+
+            <input
+              type="text"
+              value="+62 81288192900"
+              class="w-full border-2 border-pink-200 rounded-2xl px-5 py-4 outline-none focus:border-pink-400"
+            />
+          </div>
+
+          <!-- Address -->
+          <div>
+            <label class="text-gray-600 font-semibold mb-2 block">
+              Alamat
+            </label>
+
+            <input
+              type="text"
+              value="Depok, Indonesia"
+              class="w-full border-2 border-pink-200 rounded-2xl px-5 py-4 outline-none focus:border-pink-400"
+            />
+          </div>
+        </div>
+
+     <!-- BUTTON ACTION -->
+<div class="flex justify-end gap-4 mt-10">
+  <button
+    id="logoutBtn"
+    class="bg-pink-700 hover:bg-pink-500 transition text-white px-8 py-4 rounded-2xl font-bold shadow-lg"
+  >
+    Logout
+  </button>
+
+  <button
+    id="saveBtn"
+    class="bg-pink-500 hover:bg-pink-700 transition text-white px-8 py-4 rounded-2xl font-bold shadow-lg"
+  >
+    Save Changes
+  </button>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      feather.replace();
+
+      // ==========================
+      // SAVE PROFILE
+      // ==========================
+
+      const saveBtn = document.getElementById("saveBtn");
+
+      const username = document.querySelectorAll("input")[0];
+      const email = document.querySelectorAll("input")[1];
+      const phone = document.querySelectorAll("input")[2];
+      const address = document.querySelectorAll("input")[3];
+
+      saveBtn.addEventListener("click", () => {
+        if (
+          username.value === "" ||
+          email.value === "" ||
+          phone.value === "" ||
+          address.value === ""
+        ) {
+          alert("Semua data wajib diisi!");
+          return;
+        }
+
+        alert("Profile berhasil diupdate!");
+      });
+
+      // ==========================
+      // FOTO PROFILE
+      // ==========================
+
+      const uploadPhoto = document.getElementById("uploadPhoto");
+      const profileImage = document.getElementById("profileImage");
+
+      const savePhotoBtn = document.getElementById("savePhotoBtn");
+      const cancelPhotoBtn = document.getElementById("cancelPhotoBtn");
+
+      let oldImage = profileImage.src;
+      let newImage = "";
+
+      // preview foto
+      uploadPhoto.addEventListener("change", function () {
+        const file = this.files[0];
+
+        if (file) {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            newImage = e.target.result;
+
+            profileImage.src = newImage;
+
+            savePhotoBtn.classList.remove("hidden");
+            cancelPhotoBtn.classList.remove("hidden");
+          };
+
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // save photo
+      savePhotoBtn.addEventListener("click", () => {
+        oldImage = newImage;
+
+        savePhotoBtn.classList.add("hidden");
+        cancelPhotoBtn.classList.add("hidden");
+
+        alert("Foto profile berhasil diganti!");
+      });
+
+      // cancel photo
+      cancelPhotoBtn.addEventListener("click", () => {
+        profileImage.src = oldImage;
+
+        uploadPhoto.value = "";
+
+        savePhotoBtn.classList.add("hidden");
+        cancelPhotoBtn.classList.add("hidden");
+      });
+      const logoutBtn = document.getElementById("logoutBtn");
+
+      logoutBtn.addEventListener("click", () => {
+      window.location.href = "login.html";
+      });
+    </script>
+    <script src="/script/profile.js"></script>
+  </body>
+</html>

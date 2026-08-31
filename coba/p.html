@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../src/output.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"/>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <body class="bg-white">
+    <!-- NAVBAR -->
+    <nav
+      class="bg-[#FAE8E8] fixed w-full top-0 z-50 border-b border-pink-100 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- LOGO -->
+        <a href="#" class="flex items-center gap-3">
+          <img
+            src="/aset/photo_6062000353378504431_y.jpg"
+            class="w-10 h-10 rounded-full object-cover"
+            alt=""
+          />
+
+          <span class="text-2xl font-bold text-pink-900"> Velora </span>
+        </a>
+
+        <!-- MENU -->
+        <div
+          class="hidden md:flex items-center gap-10 font-medium text-pink-900"
+        >
+          <a href="#" class="hover:text-pink-500 transition"> Home </a>
+
+          <a href="#" class="hover:text-pink-500 transition"> About </a>
+
+          <a href="#" class="hover:text-pink-500 transition"> Contact </a>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="flex items-center gap-5">
+          <!-- SEARCH -->
+          <form class="hidden md:block">
+            <div class="relative">
+              <input
+                type="search"
+                placeholder="Search..."
+                class="w-64 rounded-full border border-pink-200 bg-white px-4 py-2 pl-10 text-sm outline-none focus:border-pink-400"
+              />
+
+              <!-- SEARCH ICON -->
+              <svg
+                class="absolute left-3 top-2.5 w-4 h-4 text-pink-400"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-4.35-4.35m1.85-5.65a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z"
+                />
+              </svg>
+            </div>
+          </form>
+
+          <!-- CART -->
+          <a href="/view/cart.html">
+          <button class="hover:scale-110 transition">
+            <i data-feather="shopping-cart" class="w-7 h-7 text-pink-900"></i>
+          </button>
+          </a>
+
+          <!-- PROFILE -->
+          <button class="hover:scale-110 transition">
+            <i data-feather="user" class="w-7 h-7 text-pink-900"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section
+      class="h-screen bg-cover bg-center flex items-center justify-center text-center px-6"
+      style="background-image: url('../aset/uji level.png')"
+    >
+      <div class="max-w-3xl">
+        <h1
+          class="text-5xl md:text-6xl font-bold text-white leading-tight mb-6"
+        >
+          Discover Your Style With Velora
+        </h1>
+
+        <p class="text-white text-lg md:text-xl mb-8">
+          Fashion, accessories, and electronics with elegant modern vibes.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-medium transition"
+          >
+            Shop Now
+          </button>
+
+          <button
+            class="bg-white/20 backdrop-blur-md border border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-black transition"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section class="py-16 px-5">
+      <div id="produk" class="max-w-7xl mx-auto"></div>
+    </section>
+    <div
+        id="cart-overlay"
+        onclick="toggleCart()"
+        class="fixed inset-0 bg-black/50 hidden z-40"
+      ></div>
+      <aside
+        id="sidebar-cart"
+        class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl translate-x-full transition-transform duration-300 z-50 p-5 flex flex-col"
+      >
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-bold">Keranjang</h2>
+          <button onclick="toggleCart()" class="text-2xl">&times;</button>
+        </div>
+
+        <div id="productcart" class="flex-1 border-y py-4"></div>
+
+        <button class="w-full bg-indigo-950 text-white py-3 mt-4 rounded-lg">
+          Checkout
+        </button>
+      </aside>
+    <div id="productcart"></div>
+    <script src="./p.js"></script>
+    <script>
+      feather.replace();
+    </script>
+</body>
+</html>

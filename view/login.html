@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+
+<body class="bg-pink-100 min-h-screen flex items-center justify-center p-6">
+
+  <div class="bg-white rounded-3xl shadow-xl overflow-hidden max-w-4xl h-[500px] w-full flex">
+
+    <!-- LEFT SIDE -->
+    <div class="w-1/2 hidden md:block">
+      <img
+        src="/aset/velorapink.png"
+        alt="Login Illustration"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="w-full md:w-1/2 p-12 flex flex-col justify-center">
+
+      <h1 class="text-3xl font-bold text-center text-pink-500 mb-10">
+        Login
+      </h1>
+
+      <!-- EMAIL -->
+      <div class="relative mb-5">
+        <i
+          data-feather="mail"
+          class="absolute left-4 top-1/2 -translate-y-1/2 text-pink-500 w-5 h-5">
+        </i>
+
+        <input
+          id="email"
+          type="email"
+          placeholder="Email"
+          class="w-full border border-gray-300 rounded-lg py-3 pl-12 pr-4 focus:outline-none focus:border-pink-400"
+        />
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="relative mb-3">
+        <i
+          data-feather="lock"
+          class="absolute left-4 top-1/2 -translate-y-1/2 text-pink-500 w-5 h-5">
+        </i>
+
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          class="w-full border border-gray-300 rounded-lg py-3 pl-12 pr-12 focus:outline-none focus:border-pink-400"
+        />
+
+        <button
+          id="togglePassword"
+          type="button"
+          class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500">
+          <span id="eyeIcon2"></span>
+        </button>
+      </div>
+
+      <!-- LOGIN BUTTON -->
+      <a href="/view/coba.html">
+        <button
+        id="loginBtn"
+        class="w-full bg-pink-400 hover:bg-pink-500 text-white font-semibold py-3 rounded-lg transition">
+        Log in
+      </button>
+      </a>
+
+      <div class="text-center mt-8">
+        <p class="text-gray-500">
+          Belum punya akun?
+          <a href="/view/register.html" class="text-pink-500 font-bold">
+            Register
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+<script>
+      feather.replace();
+      </script>
+      <script src="/script/login.js"></script>
+</body>
+</html>

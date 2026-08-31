@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velora</title>
+
+    <link href="../src/output.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body class="bg-white">
+    <!-- NAVBAR -->
+    <nav
+      class="bg-[#FAE8E8] fixed w-full top-0 z-50 border-b border-pink-100 shadow-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- LOGO -->
+        <a href="#" class="flex items-center gap-3">
+          <img
+            src="/aset/photo_6062000353378504431_y.jpg"
+            class="w-10 h-10 rounded-full object-cover"
+            alt=""
+          />
+          <span class="text-2xl font-bold text-pink-900"> Velora </span>
+        </a>
+
+        <!-- MENU -->
+        <div
+          class="hidden md:flex items-center gap-10 font-medium text-pink-900"
+        >
+          <a href="#" class="hover:text-pink-500 transition"> Home </a>
+          <a href="#contact" class="hover:text-pink-500 transition">
+            Contact
+          </a>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="flex items-center gap-5">
+          <!-- SEARCH -->
+          <form class="hidden md:block">
+            <div class="relative">
+              <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                class="w-64 rounded-full border border-pink-200 bg-white px-4 py-2 pl-10 text-sm outline-none focus:border-pink-400"
+              />
+              <i
+                data-feather="search"
+                class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400"
+              ></i>
+            </div>
+          </form>
+
+          <!-- CART -->
+<div class="relative">
+
+  <a href="/view/cart.html">
+    <button class="hover:scale-110 transition">
+      <i
+        data-feather="shopping-cart"
+        class="w-7 h-7 text-pink-900">
+      </i>
+    </button>
+  </a>
+
+  <span
+    id="cartBadge"
+    class="hidden absolute -top-2 -right-2 bg-pink-500 text-white text-[10px] font-bold min-w-[18px] h-[18px] rounded-full flex items-center justify-center">
+    0
+  </span>
+
+</div>
+          <!-- PROFILE -->
+          <a href="/view/profile.html">
+            <button class="hover:scale-110 transition">
+              <i data-feather="user" class="w-7 h-7 text-pink-900"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section
+      class="h-screen bg-cover bg-center flex items-center justify-center text-center px-6"
+      style="background-image: url('../aset/uji level.png')"
+    >
+      <div class="max-w-3xl">
+        <h1
+          class="text-5xl md:text-6xl font-bold text-white leading-tight mb-6"
+        >
+          Discover Your Style With Velora
+        </h1>
+
+        <p class="text-white text-lg md:text-xl mb-8">
+          Fashion, accessories, and electronics with elegant modern vibes.
+        </p>
+      </div>
+    </section>
+
+    <!-- CATEGORY -->
+    <section class="py-10 px-5">
+      <div class="max-w-7xl mx-auto">
+        <!-- TEXT -->
+        <div class="mb-6">
+          <p class="text-sm tracking-[3px] uppercase text-pink-400">
+            Categories
+          </p>
+
+          <h2 class="text-2xl font-semibold text-pink-900">Shop By Style</h2>
+        </div>
+
+        <!-- BUTTON CATEGORY -->
+        <div class="flex flex-wrap gap-3" id="categoryContainer">
+          <button
+            onclick="filterCategory('all', event)"
+            class="category-btn bg-pink-500 text-white px-5 py-2 rounded-full"
+          >
+            All
+          </button>
+
+          <button
+            onclick="filterCategory(`men's clothing`, event)"
+            class="category-btn bg-white text-pink-900 border border-pink-200 px-5 py-2 rounded-full"
+          >
+            Men's Clothing
+          </button>
+
+          <button
+            onclick="filterCategory(`women's clothing`, event)"
+            class="category-btn bg-white text-pink-900 border border-pink-200 px-5 py-2 rounded-full"
+          >
+            Women's Clothing
+          </button>
+
+          <button
+            onclick="filterCategory('jewelery', event)"
+            class="category-btn bg-white text-pink-900 border border-pink-200 px-5 py-2 rounded-full"
+          >
+            Jewelery
+          </button>
+
+          <button
+            onclick="filterCategory('electronics', event)"
+            class="category-btn bg-white text-pink-900 border border-pink-200 px-5 py-2 rounded-full"
+          >
+            Electronics
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- PRODUK -->
+    <section class="py-16 px-5">
+      <div id="produk" class="max-w-7xl mx-auto"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-[#FAE8E8] border-t border-pink-100">
+      <div class="max-w-7xl mx-auto px-5 py-12">
+        <div class="grid md:grid-cols-4 gap-10">
+          <!-- BRAND -->
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img
+                src="../aset/photo_6062000353378504431_y.jpg"
+                class="h-10 w-10 rounded-full object-cover"
+              />
+              <span class="text-2xl font-bold text-pink-900"> Velora </span>
+            </div>
+
+            <p class="text-pink-800 text-sm leading-relaxed">
+              Modern fashion brand with elegant and aesthetic vibes.
+            </p>
+          </div>
+
+          <!-- MENU -->
+          <div>
+            <h2 class="font-semibold text-pink-900 mb-4">Navigation</h2>
+
+            <ul class="space-y-2 text-pink-700">
+              <li><a href="#home" class="hover:text-pink-500">Home</a></li>
+              <li><a href="#about" class="hover:text-pink-500">About</a></li>
+              <li>
+                <a href="#contact" class="hover:text-pink-500">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- HELP -->
+          <div>
+            <h2 class="font-semibold text-pink-900 mb-4">Support</h2>
+
+            <ul class="space-y-2 text-pink-700">
+              <li>
+                <a href="#" class="hover:text-pink-500">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Terms & Conditions</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- SOCIAL -->
+          <div>
+            <h2 class="font-semibold text-pink-900 mb-4">Follow Us</h2>
+
+            <a href="https://instagram.com/portofolio_asyifaa" target="_blank">
+              <i class="bx bxl-instagram text-3xl text-pink-900"></i>
+            </a>
+
+            <a href="https://tiktok.com/@ccciippaaaa" target="_blank">
+              <i class="bx bxl-tiktok text-3xl text-pink-900"></i>
+            </a>
+
+            <a href="https://wa.me/621288192900" target="_blank">
+              <i class="bx bxl-whatsapp text-3xl text-pink-900"></i>
+            </a>
+          </div>
+        </div>
+
+        <hr class="my-8 border-pink-200" />
+
+        <p class="text-center text-sm text-pink-700">@ 2026 Velora.</p>
+      </div>
+    </footer>
+    <div id="detail"></div>
+    <script src="../script/produk.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

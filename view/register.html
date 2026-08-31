@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Font -->
+  </head>
+
+  <body class="bg-pink-100 min-h-screen flex items-center justify-center p-6">
+
+<div class="bg-white rounded-3xl shadow-xl overflow-hidden max-w-4xl h-[500px] w-full flex">
+
+  <!-- LEFT -->
+  <div class="w-1/2 hidden md:block">
+    <img
+      src="/aset/velorapink.png"
+      class="w-full h-full object-cover"
+      alt="Velora"
+    />
+  </div>
+
+  <!-- RIGHT -->
+  <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+
+    <h1 class="text-3xl font-bold text-center text-pink-500 mb-6">
+      Register
+    </h1>
+
+    <!-- Username -->
+    <div class="relative mb-4">
+      <i data-feather="user"
+         class="absolute left-3 top-1/2 w-5 h-5 -translate-y-1/2 text-pink-500">
+      </i>
+
+      <input
+        id="username"
+        type="text"
+        placeholder="Username"
+        class="w-full border rounded-lg py-2 pl-10 pr-4"
+      />
+    </div>
+
+    <!-- Email -->
+    <div class="relative mb-4">
+      <i data-feather="mail"
+         class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-pink-500">
+      </i>
+
+      <input
+        id="email"
+        type="email"
+        placeholder="Email"
+        class="w-full border rounded-lg py-2 pl-10 pr-4"
+      />
+    </div>
+
+    <!-- Password -->
+    <div class="relative mb-4">
+      <i data-feather="lock"
+         class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-pink-500">
+      </i>
+
+      <input
+        id="password"
+        type="password"
+        placeholder="Password"
+        class="w-full border rounded-lg py-2 pl-10 pr-10"
+      />
+
+      <button
+        id="togglePassword"
+        type="button"
+        class="absolute right-3 top-1/2 -translate-y-1/2">
+      </button>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="relative mb-6">
+      <i data-feather="shield"
+         class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-pink-500">
+      </i>
+
+      <input
+        id="confirmPassword"
+        type="password"
+        placeholder="Confirm Password"
+        class="w-full border rounded-lg py-2 pl-10 pr-10"
+      />
+
+      <button
+        id="toggleConfirmPassword"
+        type="button"
+        class="absolute right-3 top-1/2 -translate-y-1/2">
+      </button>
+    </div>
+
+    <a href="/view/coba.html">
+    <button
+      id="registerBtn"
+      class="w-full bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 rounded-lg">
+      Register
+    </button>
+    </a>
+
+    <p class="text-center mt-5 text-gray-500">
+      Sudah punya akun?
+      <a href="/view/login.html"
+         class="text-pink-500 font-bold">
+        Login
+      </a>
+    </p>
+<script>
+  feather.replace();
+</script>
+  </div>
+</div>
+  </body>
+</html>

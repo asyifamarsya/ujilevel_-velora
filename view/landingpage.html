@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Velora</title>
+
+  <link href="../src/output.css" rel="stylesheet" />
+
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="bg-white min-h-screen flex flex-col">
+
+  <!-- NAVBAR -->
+  <nav
+    class="bg-[#FAE8E8] fixed w-full top-0 z-50 border-b border-pink-100 shadow-sm"
+  >
+    <div
+      class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+    >
+
+      <!-- LOGO -->
+      <a href="#" class="flex items-center gap-3">
+        <img
+          src="/aset/photo_6062000353378504431_y.jpg"
+          class="w-10 h-10 rounded-full object-cover"
+          alt=""
+        />
+
+        <span class="text-2xl font-bold text-pink-900">
+          Velora
+        </span>
+      </a>
+
+      <!-- MENU -->
+      <div
+        class="hidden md:flex items-center gap-10 font-medium text-pink-900"
+      >
+        <a href="#home" class="hover:text-pink-500 transition">
+          Home
+        </a>
+
+        <a href="#about" class="hover:text-pink-500 transition">
+          About
+        </a>
+
+        <a href="#contact" class="hover:text-pink-500 transition">
+          Contact
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section
+    id="home"
+    class="h-screen bg-cover bg-center flex items-center justify-center text-center px-6 mt-13"
+    style="background-image:url('/aset/vel.jpg')"
+  >
+
+   <div class="max-w-6xl text-left mr-180">
+
+    <h2 class="text-left text-2xl md:text-5xl items-center font-bold text-white leading-tight mb-5">
+        Discover Style,<br>
+        Luxury & Innovation
+    </h2>
+
+    <p class="text-left text-[16px] md:text-xl text-white/90 leading-relaxed mb-8">
+        Explore premium fashion, elegant jewelry, and the <br>
+        latest electronics curated to elevate your lifestyle <br>
+        and express your unique style.
+    </p>
+
+    
+      <a href="/view/register.html" class="-20">
+        <button class="bg-pink-500 hover:bg-pink-300 text-white px-6 py-3 rounded-full font-medium transition">
+          Get Started
+        </button>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-[#f3f3f3] py-24 px-6">
+
+    <div class="text-center max-w-4xl mx-auto mb-12">
+
+      <h1 class="text-4xl font-bold text-[#0D1730] mb-3">
+        About Us
+      </h1>
+
+      <p class="text-gray-500">
+        Discover a modern shopping experience with premium quality products.
+      </p>
+
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+
+      <div class="bg-[#FAE8E8] rounded-[35px] shadow-2xl overflow-hidden grid md:grid-cols-2">
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=1000" class="w-full h-full object-cover" alt=""/>
+        </div>
+
+        <div class="p-10 flex flex-col justify-center">
+
+          <h2 class="text-4xl font-bold text-[#0D1730] mb-5">
+            About Velora
+          </h2>
+
+          <p class="text-gray-500 leading-loose text-lg">
+            Velora hadir untuk memberikan pengalaman belanja online yang
+            modern, cepat, aman, dan nyaman bagi semua pelanggan.
+            Kami menyediakan berbagai produk fashion, accessories,
+            dan elektronik dengan kualitas premium dan desain elegan
+            untuk gaya hidup modern.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CATEGORY -->
+  <section class="py-10 px-5">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="mb-6">
+
+        <p class="text-sm tracking-[3px] uppercase text-pink-400">
+          Categories
+        </p>
+
+        <h2 class="text-2xl font-semibold text-pink-900">
+          Shop By Style
+        </h2>
+
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+
+        <button onclick="filterCategory('all', event)" class="category-btn bg-pink-500 text-white px-5 py-2 rounded-full">
+          All
+        </button>
+
+        <button onclick="filterCategory(`men's clothing`, event)" class="category-btn bg-white text-pink-900 border border-pink-200 px-5 py-2 rounded-full">
+          Men's Clothing
+        </button>
+
+        <button onclick="filterCategory(`women's clothing`, event)"class="category-btn bg-white text-pink-900 border border-pink-200 px-5 py-2 rounded-full">
+          Women's Clothing
+        </button>
+
+        <button onclick="filterCategory('jewelery', event)" class="category-btn bg-white text-pink-900 border border-pink-200 px-5 py-2 rounded-full">
+          Jewelery
+        </button>
+
+        <button onclick="filterCategory('electronics', event)" class="category-btn bg-white text-pink-900 border border-pink-200 px-5 py-2 rounded-full">
+          Electronics
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUCT -->
+  <section class="py-16 px-5">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div id="produk"></div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact"class="bg-[#FAE8E8] border-t border-pink-100 mt-20">
+
+    <div class="max-w-7xl mx-auto px-5 py-12">
+
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <div>
+
+          <div class="flex items-center gap-3 mb-4">
+
+            <img src="../aset/photo_6062000353378504431_y.jpg" class="h-10 w-10 rounded-full object-cover"/>
+
+            <span class="text-2xl font-bold text-pink-900">
+              Velora
+            </span>
+
+          </div>
+
+          <p class="text-pink-800 text-sm">
+            Modern fashion brand with elegant and aesthetic vibes.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h2 class="font-semibold text-pink-900 mb-4">
+            Navigation
+          </h2>
+
+          <ul class="space-y-2 text-pink-700">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+        </div>
+
+        <div>
+
+          <h2 class="font-semibold text-pink-900 mb-4">
+            Support
+          </h2>
+
+          <ul class="space-y-2 text-pink-700">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+
+        </div>
+
+        <div>
+
+          <h2 class="font-semibold text-pink-900 mb-4">
+            Follow Us
+          </h2>
+
+          <div class="flex gap-3">
+
+            <i class="bx bxl-instagram text-3xl text-pink-900"></i>
+            <i class="bx bxl-tiktok text-3xl text-pink-900"></i>
+            <i class="bx bxl-whatsapp text-3xl text-pink-900"></i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <hr class="my-8 border-pink-200" />
+
+      <p class="text-center text-sm text-pink-700">
+        @ 2026 Velora
+      </p>
+
+    </div>
+
+  </footer>
+
+  <script src="/script/landingpage.js"></script>
+
+  <script>
+    feather.replace();
+  </script>
+
+</body>
+</html>
